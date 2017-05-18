@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://isys.ianetwork.net/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.fixauto.com/WebServices" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://isys.ianetwork.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://isys.ianetwork.net/">
+      <s:import namespace="http://www.fixauto.com/WebServices" />
+      <s:element name="LoadEMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMSString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSSuppTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFAddress1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RepairFacility" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFAddress2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacilityContact" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacilityContact2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFTaxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BodyStyle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Deductible" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSSystem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadEMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadEMSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpLoadEMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMSString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSSuppTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFAddress1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RepairFacility" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFAddress2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacilityContact" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacilityContact2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFTaxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BodyStyle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Deductible" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSSystem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpLoadEMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpLoadEMSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadEMSWithResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EMSString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignmentID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSSuppTotal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFAddress1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RepairFacility" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFAddress2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacilityContact" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FacilityContact2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFTaxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Make" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BodyStyle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Deductible" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EMSSystem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadEMSWithResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadEMSWithResultsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignmentID_FileNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignmentID_FileNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignmentID_FileNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeIsysID_ClaimNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClaimNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeIsysID_ClaimNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeIsysID_ClaimNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClaimNumberbyIsysID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsysID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClaimNumberbyIsysIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClaimNumberbyIsysIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClaimNumberRequired">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsysID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClaimNumberRequiredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetClaimNumberRequiredResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAuditNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsysID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAuditNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAuditNoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMSForAssignment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsysID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSoft" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMSForAssignmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEMSForAssignmentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignment_AuditResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignment_AuditResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignment_AuditResultsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePicture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PicString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PicName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePictureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceivePictureResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePictureToAssignmentID_New">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PicString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PicName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgEntityID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePictureToAssignmentID_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceivePictureToAssignmentID_NewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePictureToAssignmentID_NewLargeFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PicString" type="tns:FileStream" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PicName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgEntityID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="userType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FileStream">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Stream" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Stream" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MarshalByRefObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Position" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReadTimeout" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="WriteTimeout" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="MarshalByRefObject" abstract="true" />
+      <s:element name="ReceivePictureToAssignmentID_NewLargeFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceivePictureToAssignmentID_NewLargeFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePictureToAssignmentID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PicString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PicName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgEntityID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceivePictureToAssignmentIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceivePictureToAssignmentIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiveDocumentsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDocumentsAssignmentCynCast">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocString" type="s1:DOCUMENT_ARCHIVE_FILE_TYPE" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignmentID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgEntityID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDocumentsAssignmentCynCastResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiveDocumentsAssignmentCynCastResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDocumentsAssignment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssignmentID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FolderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrgEntityID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiveDocumentsAssignmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReceiveDocumentsAssignmentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyInternalUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyInternalUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyInternalUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUserCarrier">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUserCarrierResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyUserCarrierResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUserAppraiser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUserAppraiserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="VerifyUserAppraiserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateIsysID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsysID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateIsysIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateIsysIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateIsysIDAndAppraiserUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsysID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateIsysIDAndAppraiserUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidateIsysIDAndAppraiserUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.fixauto.com/WebServices">
+      <s:complexType name="DOCUMENT_ARCHIVE_FILE_TYPE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocStream" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadEMSSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadEMS" />
+  </wsdl:message>
+  <wsdl:message name="LoadEMSSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadEMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpLoadEMSSoapIn">
+    <wsdl:part name="parameters" element="tns:UpLoadEMS" />
+  </wsdl:message>
+  <wsdl:message name="UpLoadEMSSoapOut">
+    <wsdl:part name="parameters" element="tns:UpLoadEMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadEMSWithResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadEMSWithResults" />
+  </wsdl:message>
+  <wsdl:message name="LoadEMSWithResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadEMSWithResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignmentID_FileNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignmentID_FileNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignmentID_FileNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignmentID_FileNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeIsysID_ClaimNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GeIsysID_ClaimNumber" />
+  </wsdl:message>
+  <wsdl:message name="GeIsysID_ClaimNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GeIsysID_ClaimNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClaimNumberbyIsysIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClaimNumberbyIsysID" />
+  </wsdl:message>
+  <wsdl:message name="GetClaimNumberbyIsysIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClaimNumberbyIsysIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClaimNumberRequiredSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClaimNumberRequired" />
+  </wsdl:message>
+  <wsdl:message name="GetClaimNumberRequiredSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClaimNumberRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAuditNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAuditNote" />
+  </wsdl:message>
+  <wsdl:message name="AddAuditNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAuditNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEMSForAssignmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEMSForAssignment" />
+  </wsdl:message>
+  <wsdl:message name="GetEMSForAssignmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEMSForAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignment_AuditResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignment_AuditResults" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignment_AuditResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignment_AuditResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceivePicture" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceivePictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureToAssignmentID_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceivePictureToAssignmentID_New" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureToAssignmentID_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceivePictureToAssignmentID_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureToAssignmentID_NewLargeFileSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceivePictureToAssignmentID_NewLargeFile" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureToAssignmentID_NewLargeFileSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceivePictureToAssignmentID_NewLargeFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureToAssignmentIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceivePictureToAssignmentID" />
+  </wsdl:message>
+  <wsdl:message name="ReceivePictureToAssignmentIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceivePictureToAssignmentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDocumentsAssignmentCynCastSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveDocumentsAssignmentCynCast" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDocumentsAssignmentCynCastSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveDocumentsAssignmentCynCastResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDocumentsAssignmentSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiveDocumentsAssignment" />
+  </wsdl:message>
+  <wsdl:message name="ReceiveDocumentsAssignmentSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiveDocumentsAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyInternalUserSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyInternalUser" />
+  </wsdl:message>
+  <wsdl:message name="VerifyInternalUserSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyInternalUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserCarrierSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyUserCarrier" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserCarrierSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyUserCarrierResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserAppraiserSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyUserAppraiser" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserAppraiserSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyUserAppraiserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateIsysIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateIsysID" />
+  </wsdl:message>
+  <wsdl:message name="ValidateIsysIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateIsysIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateIsysIDAndAppraiserUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateIsysIDAndAppraiserUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateIsysIDAndAppraiserUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateIsysIDAndAppraiserUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WS_FileUploadSoap">
+    <wsdl:operation name="LoadEMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload the EMS Data in CCC Format</wsdl:documentation>
+      <wsdl:input message="tns:LoadEMSSoapIn" />
+      <wsdl:output message="tns:LoadEMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadEMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload the EMS Package with EMSVersion</wsdl:documentation>
+      <wsdl:input message="tns:UpLoadEMSSoapIn" />
+      <wsdl:output message="tns:UpLoadEMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadEMSWithResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload the EMS Data Format</wsdl:documentation>
+      <wsdl:input message="tns:LoadEMSWithResultsSoapIn" />
+      <wsdl:output message="tns:LoadEMSWithResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignmentID_FileNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the IANET Isys ID</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignmentID_FileNumberSoapIn" />
+      <wsdl:output message="tns:GetAssignmentID_FileNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeIsysID_ClaimNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the IANET ID by Claim Number</wsdl:documentation>
+      <wsdl:input message="tns:GeIsysID_ClaimNumberSoapIn" />
+      <wsdl:output message="tns:GeIsysID_ClaimNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNumberbyIsysID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Claim Number</wsdl:documentation>
+      <wsdl:input message="tns:GetClaimNumberbyIsysIDSoapIn" />
+      <wsdl:output message="tns:GetClaimNumberbyIsysIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNumberRequired">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Claim Number</wsdl:documentation>
+      <wsdl:input message="tns:GetClaimNumberRequiredSoapIn" />
+      <wsdl:output message="tns:GetClaimNumberRequiredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditNote">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add Diary to Admin Data</wsdl:documentation>
+      <wsdl:input message="tns:AddAuditNoteSoapIn" />
+      <wsdl:output message="tns:AddAuditNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEMSForAssignment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Assignment Data for an Assignment</wsdl:documentation>
+      <wsdl:input message="tns:GetEMSForAssignmentSoapIn" />
+      <wsdl:output message="tns:GetEMSForAssignmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignment_AuditResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the Audit results</wsdl:documentation>
+      <wsdl:input message="tns:GetAssignment_AuditResultsSoapIn" />
+      <wsdl:output message="tns:GetAssignment_AuditResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePicture">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Pictures to the Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceivePictureSoapIn" />
+      <wsdl:output message="tns:ReceivePictureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID_New">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Pictures to specific fileFolder on Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceivePictureToAssignmentID_NewSoapIn" />
+      <wsdl:output message="tns:ReceivePictureToAssignmentID_NewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID_NewLargeFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Large Files to specific fileFolder on Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceivePictureToAssignmentID_NewLargeFileSoapIn" />
+      <wsdl:output message="tns:ReceivePictureToAssignmentID_NewLargeFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Pictures to the Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceivePictureToAssignmentIDSoapIn" />
+      <wsdl:output message="tns:ReceivePictureToAssignmentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Documents to the Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceiveDocumentsSoapIn" />
+      <wsdl:output message="tns:ReceiveDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate IAnet user</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserSoapIn" />
+      <wsdl:output message="tns:ValidateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocumentsAssignmentCynCast">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Documents to the Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceiveDocumentsAssignmentCynCastSoapIn" />
+      <wsdl:output message="tns:ReceiveDocumentsAssignmentCynCastSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocumentsAssignment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Upload Documents to the Server</wsdl:documentation>
+      <wsdl:input message="tns:ReceiveDocumentsAssignmentSoapIn" />
+      <wsdl:output message="tns:ReceiveDocumentsAssignmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyInternalUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate IAnet internaluser</wsdl:documentation>
+      <wsdl:input message="tns:VerifyInternalUserSoapIn" />
+      <wsdl:output message="tns:VerifyInternalUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserCarrier">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate IAnet carrier user</wsdl:documentation>
+      <wsdl:input message="tns:VerifyUserCarrierSoapIn" />
+      <wsdl:output message="tns:VerifyUserCarrierSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserAppraiser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate IAnet appraiser user</wsdl:documentation>
+      <wsdl:input message="tns:VerifyUserAppraiserSoapIn" />
+      <wsdl:output message="tns:VerifyUserAppraiserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsysID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate AssignmentID</wsdl:documentation>
+      <wsdl:input message="tns:ValidateIsysIDSoapIn" />
+      <wsdl:output message="tns:ValidateIsysIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsysIDAndAppraiserUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate AssignmentID mapped to user</wsdl:documentation>
+      <wsdl:input message="tns:ValidateIsysIDAndAppraiserUserSoapIn" />
+      <wsdl:output message="tns:ValidateIsysIDAndAppraiserUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WS_FileUploadSoap" type="tns:WS_FileUploadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadEMS">
+      <soap:operation soapAction="http://isys.ianetwork.net/LoadEMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadEMS">
+      <soap:operation soapAction="http://isys.ianetwork.net/UpLoadEMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadEMSWithResults">
+      <soap:operation soapAction="http://isys.ianetwork.net/LoadEMSWithResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignmentID_FileNumber">
+      <soap:operation soapAction="http://isys.ianetwork.net/GetAssignmentID_FileNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeIsysID_ClaimNumber">
+      <soap:operation soapAction="http://isys.ianetwork.net/GeIsysID_ClaimNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNumberbyIsysID">
+      <soap:operation soapAction="http://isys.ianetwork.net/GetClaimNumberbyIsysID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNumberRequired">
+      <soap:operation soapAction="http://isys.ianetwork.net/GetClaimNumberRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditNote">
+      <soap:operation soapAction="http://isys.ianetwork.net/AddAuditNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMSForAssignment">
+      <soap:operation soapAction="http://isys.ianetwork.net/GetEMSForAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignment_AuditResults">
+      <soap:operation soapAction="http://isys.ianetwork.net/GetAssignment_AuditResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePicture">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceivePicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID_New">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceivePictureToAssignmentID_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID_NewLargeFile">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceivePictureToAssignmentID_NewLargeFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceivePictureToAssignmentID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocuments">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceiveDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://isys.ianetwork.net/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocumentsAssignmentCynCast">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceiveDocumentsAssignmentCynCast" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocumentsAssignment">
+      <soap:operation soapAction="http://isys.ianetwork.net/ReceiveDocumentsAssignment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyInternalUser">
+      <soap:operation soapAction="http://isys.ianetwork.net/VerifyInternalUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserCarrier">
+      <soap:operation soapAction="http://isys.ianetwork.net/VerifyUserCarrier" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserAppraiser">
+      <soap:operation soapAction="http://isys.ianetwork.net/VerifyUserAppraiser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsysID">
+      <soap:operation soapAction="http://isys.ianetwork.net/ValidateIsysID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsysIDAndAppraiserUser">
+      <soap:operation soapAction="http://isys.ianetwork.net/ValidateIsysIDAndAppraiserUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WS_FileUploadSoap12" type="tns:WS_FileUploadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadEMS">
+      <soap12:operation soapAction="http://isys.ianetwork.net/LoadEMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadEMS">
+      <soap12:operation soapAction="http://isys.ianetwork.net/UpLoadEMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadEMSWithResults">
+      <soap12:operation soapAction="http://isys.ianetwork.net/LoadEMSWithResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignmentID_FileNumber">
+      <soap12:operation soapAction="http://isys.ianetwork.net/GetAssignmentID_FileNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeIsysID_ClaimNumber">
+      <soap12:operation soapAction="http://isys.ianetwork.net/GeIsysID_ClaimNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNumberbyIsysID">
+      <soap12:operation soapAction="http://isys.ianetwork.net/GetClaimNumberbyIsysID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNumberRequired">
+      <soap12:operation soapAction="http://isys.ianetwork.net/GetClaimNumberRequired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditNote">
+      <soap12:operation soapAction="http://isys.ianetwork.net/AddAuditNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMSForAssignment">
+      <soap12:operation soapAction="http://isys.ianetwork.net/GetEMSForAssignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignment_AuditResults">
+      <soap12:operation soapAction="http://isys.ianetwork.net/GetAssignment_AuditResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePicture">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceivePicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID_New">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceivePictureToAssignmentID_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID_NewLargeFile">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceivePictureToAssignmentID_NewLargeFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePictureToAssignmentID">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceivePictureToAssignmentID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocuments">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceiveDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocumentsAssignmentCynCast">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceiveDocumentsAssignmentCynCast" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveDocumentsAssignment">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ReceiveDocumentsAssignment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyInternalUser">
+      <soap12:operation soapAction="http://isys.ianetwork.net/VerifyInternalUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserCarrier">
+      <soap12:operation soapAction="http://isys.ianetwork.net/VerifyUserCarrier" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUserAppraiser">
+      <soap12:operation soapAction="http://isys.ianetwork.net/VerifyUserAppraiser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsysID">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ValidateIsysID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateIsysIDAndAppraiserUser">
+      <soap12:operation soapAction="http://isys.ianetwork.net/ValidateIsysIDAndAppraiserUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS_FileUpload">
+    <wsdl:port name="WS_FileUploadSoap" binding="tns:WS_FileUploadSoap">
+      <soap:address location="http://test1.ianetwork.net/WS/WS_FileUpload.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WS_FileUploadSoap12" binding="tns:WS_FileUploadSoap12">
+      <soap12:address location="http://test1.ianetwork.net/WS/WS_FileUpload.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://test1.ianetwork.net/WS/WS_FileUpload.asmx?wsdl" docRef="http://test1.ianetwork.net/WS/WS_FileUpload.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://test1.ianetwork.net/WS/WS_FileUpload.asmx" xmlns:q1="http://isys.ianetwork.net/" binding="q1:WS_FileUploadSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://test1.ianetwork.net/WS/WS_FileUpload.asmx" xmlns:q2="http://isys.ianetwork.net/" binding="q2:WS_FileUploadSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

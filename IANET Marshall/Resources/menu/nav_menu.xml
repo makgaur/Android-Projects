@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_home"
+      android:icon="@drawable/Home"
+      android:title="Home" />
+    <item
+      android:id="@+id/nav_dashboard"
+      android:icon="@drawable/Dashboard"
+      android:title="Dashboard" />
+    <item
+      android:id="@+id/nav_messages"
+      android:icon="@drawable/Message"
+      android:title="Messages" />
+    <item
+      android:id="@+id/nav_claims"
+      android:icon="@drawable/Claims"
+      android:title="Claims" />
+    <item
+      android:id="@+id/nav_calandar"
+      android:icon="@drawable/Calendar"
+      android:title="Appointments" />
+    <item
+      android:id="@+id/nav_recievables"
+      android:icon="@drawable/Recievables"
+      android:title="Receivables" />
+    <item
+      android:id="@+id/nav_itenary"
+      android:icon="@drawable/map"
+      android:title="Itenary" />
+  </group>
+
+  <item>
+    <menu>
+      <item
+        android:title="Support"
+        android:id="@+id/nav_support"
+        android:icon="@drawable/Support"/>
+      <item
+        android:title="My Account"
+        android:id="@+id/nav_myaccount"
+        android:icon="@drawable/MyAcc"/>
+    </menu>
+  </item>
+</menu>
